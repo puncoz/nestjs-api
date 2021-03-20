@@ -3,7 +3,7 @@ import {
     Entity,
     OneToMany,
 }                     from "typeorm"
-import { USERS }      from "../../constants/DBTables"
+import { USERS }      from "../../../Constants/DBTables"
 import { BaseEntity } from "../BaseEntity"
 import { PostEntity } from "../Post/PostEntity"
 
@@ -13,9 +13,10 @@ export enum Gender {
     OTHER = "other"
 }
 
-export enum Role {
+export enum Roles {
     ADMIN = "admin",
-    GENERAL = "general"
+    AUTHOR = "author",
+    READER = "reader"
 }
 
 @Entity(USERS)
@@ -35,9 +36,9 @@ export class UserEntity extends BaseEntity {
     @Column({ type: "enum", enum: Gender, default: Gender.MALE })
     gender: Gender
 
-    @Column({ type: "enum", enum: Role, default: Role.GENERAL })
-    role: Role
+    @Column({ type: "enum", enum: Roles, default: Roles.READER })
+    role: Roles
 
-    @OneToMany(type => PostEntity, post => post.author)
+    @OneToMany((type) => PostEntity, (post) => post.author)
     posts: PostEntity[]
 }

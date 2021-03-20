@@ -1,9 +1,10 @@
 import {
     Column,
     Entity,
+    JoinColumn,
     ManyToOne,
 }                     from "typeorm"
-import { POSTS }      from "../../constants/DBTables"
+import { POSTS }      from "../../../Constants/DBTables"
 import { BaseEntity } from "../BaseEntity"
 import { UserEntity } from "../User/UserEntity"
 
@@ -18,8 +19,9 @@ export class PostEntity extends BaseEntity {
     @Column({ type: "text" })
     content: string
 
-    @ManyToOne(type => UserEntity, author => author.posts, {
+    @ManyToOne((type) => UserEntity, (author) => author.posts, {
         eager: true,
     })
+    @JoinColumn({ name: "author_id" })
     author: UserEntity
 }

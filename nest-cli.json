@@ -1,4 +1,11 @@
 {
-  "collection": "@nestjs/schematics",
-  "sourceRoot": "src"
+  "collection":      "@nestjs/schematics",
+  "sourceRoot":      "src",
+  "entryFile":       "index",
+  "compilerOptions": {
+    "deleteOutDir": true
+  },
+  "generateOptions": {
+    "spec": false
+  }
 }

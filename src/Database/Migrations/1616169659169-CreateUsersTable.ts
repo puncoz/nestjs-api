@@ -4,7 +4,7 @@ import {
     Table,
     TableIndex,
 }                from "typeorm"
-import { USERS } from "../../constants/DBTables"
+import { USERS } from "../../Constants/DBTables"
 
 export class CreateUsersTable1616169659169 implements MigrationInterface {
 

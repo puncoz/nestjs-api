@@ -4,9 +4,9 @@ import {
     ConfigService,
 }                        from "@nestjs/config"
 import { TypeOrmModule } from "@nestjs/typeorm"
-import { AppController } from "./app.controller"
-import { AppService }    from "./app.service"
-import configs           from "./config"
+import { AppController } from "./AppController"
+import { AppService }    from "./AppService"
+import configs           from "./Config"
 
 @Module({
     imports: [

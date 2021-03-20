@@ -7,7 +7,7 @@ import {
 import {
     POSTS,
     USERS,
-} from "../../constants/DBTables"
+} from "../../Constants/DBTables"
 
 export class CreatePostsTable1616223622430 implements MigrationInterface {
 
