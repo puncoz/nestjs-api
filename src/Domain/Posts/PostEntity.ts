@@ -4,9 +4,9 @@ import {
     JoinColumn,
     ManyToOne,
 }                     from "typeorm"
-import { POSTS }      from "../../../Constants/DBTables"
-import { BaseEntity } from "../BaseEntity"
-import { UserEntity } from "../User/UserEntity"
+import { POSTS }      from "../../Constants/DBTables"
+import { BaseEntity } from "../../Support/BaseEntity"
+import { UserEntity } from "../Users/UserEntity"
 
 @Entity(POSTS)
 export class PostEntity extends BaseEntity {

@@ -3,9 +3,9 @@ import {
     define,
     factory,
 }                     from "typeorm-seeding"
-import { random }     from "../../Utils/Helpers"
-import { PostEntity } from "../Entities/Post/PostEntity"
-import { UserEntity } from "../Entities/User/UserEntity"
+import { PostEntity } from "../../Domain/Posts/PostEntity"
+import { UserEntity } from "../../Domain/Users/UserEntity"
+import { random }     from "../../Support/Helpers"
 
 define(PostEntity, (faker: typeof Faker) => {
     const post = new PostEntity()

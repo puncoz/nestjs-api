@@ -4,7 +4,7 @@ import {
     Gender,
     Roles,
     UserEntity,
-}                 from "../Entities/User/UserEntity"
+}                 from "../../Domain/Users/UserEntity"
 
 define(UserEntity, (faker: typeof Faker) => {
     const user = new UserEntity()

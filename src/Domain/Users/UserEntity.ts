@@ -3,9 +3,9 @@ import {
     Entity,
     OneToMany,
 }                     from "typeorm"
-import { USERS }      from "../../../Constants/DBTables"
-import { BaseEntity } from "../BaseEntity"
-import { PostEntity } from "../Post/PostEntity"
+import { USERS }      from "../../Constants/DBTables"
+import { BaseEntity } from "../../Support/BaseEntity"
+import { PostEntity } from "../Posts/PostEntity"
 
 export enum Gender {
     MALE = "male",

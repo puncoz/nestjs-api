@@ -23,8 +23,8 @@ export const DatabaseConfig = registerAs("database", (): DatabaseConfigType => (
     autoLoadEntities: true,
 
     migrations: ["dist/Database/Migrations/**/*{.ts,.js}"],
-    entities: ["dist/Database/Entities/**/*Entity{.ts,.js}"],
-    subscribers: ["dist/Database/Entities/**/*Subscriber{.ts,.js}"],
+    entities: ["dist/Domain/**/*Entity{.ts,.js}"],
+    subscribers: ["dist/Domain/**/*Subscriber{.ts,.js}"],
 
     seeds: [
         "dist/Database/Seeds/**/*Seeder{.ts,.js}",

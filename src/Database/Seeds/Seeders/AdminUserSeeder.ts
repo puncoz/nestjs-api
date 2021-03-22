@@ -7,7 +7,7 @@ import {
     Gender,
     Roles,
     UserEntity,
-}                     from "../../Entities/User/UserEntity"
+}                     from "../../../Domain/Users/UserEntity"
 
 class AdminUserSeeder implements Seeder {
     public async run(factory: Factory, connection: Connection): Promise<void> {

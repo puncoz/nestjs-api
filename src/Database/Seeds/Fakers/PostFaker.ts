@@ -2,8 +2,8 @@ import {
     Factory,
     Seeder,
 }                     from "typeorm-seeding"
-import { random }     from "../../../Utils/Helpers"
-import { PostEntity } from "../../Entities/Post/PostEntity"
+import { PostEntity } from "../../../Domain/Posts/PostEntity"
+import { random }     from "../../../Support/Helpers"
 
 class PostFaker implements Seeder {
     public async run(factory: Factory): Promise<void> {
